@@ -2,7 +2,7 @@ import React from "react";
 
 const Experiment = () => {
   return (
-    <div className="w-full py-5 font-poppins px-20">
+    <div id="experiments" className="w-full py-5 font-poppins px-20">
       <div className="flex flex-col space-y-5">
         <div className="w-fit text-xl font-bold  hover:underline decoration-blue-500 decoration-2 underline-offset-4">
           <p className="text-gray-600">EXPERIMENTS</p>

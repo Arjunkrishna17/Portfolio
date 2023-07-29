@@ -5,7 +5,7 @@ import { ReactComponent as GitHub } from "./Images/GitHub.svg";
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full h-full py-20 font-poppins items-center px-44">
+    <div id="home" className="flex flex-col w-full h-full py-20 font-poppins items-center px-44">
       <div className="flex mt-16 w-full justify-between space-x-20 items-center">
         <div className="flex flex-col  text-3xl font-bold space-y-10">
           <div className="opacity-60">
@@ -18,6 +18,9 @@ const Home = () => {
                   .pauseFor(2000)
                   .deleteAll()
                   .typeString("a Front-End Engineer")
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString("a Back-End Engineer")
                   .pauseFor(2000)
                   .deleteAll()
                   .start();
