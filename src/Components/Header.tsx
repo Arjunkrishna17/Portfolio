@@ -2,10 +2,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex w-full h-20 items-center justify-between px-20 bg-gradient-to-r to-cyan-500 from-blue-500">
-      <h4 className="text-white font-lobster text-2xl cursor-pointer">
+    <div className="flex fixed w-full h-20 items-center justify-between px-20 bg-gradient-to-r to-cyan-500 from-blue-500">
+      <a href="/" className="text-white font-lobster text-2xl cursor-pointer">
         Krishna Arjun
-      </h4>
+      </a>
 
       <ul className="flex space-x-5 text-white font-poppins text-sm">
         <a
@@ -34,7 +34,6 @@ const Header = () => {
         >
           BLOG
         </a>
-       
       </ul>
     </div>
   );
