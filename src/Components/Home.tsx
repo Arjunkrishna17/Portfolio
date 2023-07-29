@@ -2,10 +2,14 @@ import React from "react";
 import TypeWritter from "typewriter-effect";
 import { ReactComponent as LinkedIn } from "./Images/LinekedIn.svg";
 import { ReactComponent as GitHub } from "./Images/GitHub.svg";
+import { GIT_HUB_LINK, LINKED_IN_LINK } from "./Constants";
 
 const Home = () => {
   return (
-    <div id="home" className="flex flex-col w-full h-full py-20 font-poppins items-center px-44">
+    <div
+      id="home"
+      className="flex flex-col w-full h-full py-20 font-poppins items-center px-44"
+    >
       <div className="flex mt-16 w-full justify-between space-x-20 items-center">
         <div className="flex flex-col  text-3xl font-bold space-y-10">
           <div className="opacity-60">
@@ -40,12 +44,22 @@ const Home = () => {
             exceptional value to my clients.
           </p>
           <div className="flex space-x-5">
-            <button className="hover:scale-110 transition">
+            <a
+              href={LINKED_IN_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:scale-110 transition"
+            >
               <LinkedIn className="w-10 h-10" />
-            </button>
-            <button className="hover:scale-110 transition">
+            </a>
+            <a
+              href={GIT_HUB_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:scale-110 transition"
+            >
               <GitHub className="w-10 h-10" />
-            </button>
+            </a>
           </div>
         </div>
 
