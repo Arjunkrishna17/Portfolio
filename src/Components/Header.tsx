@@ -11,14 +11,19 @@ const Header = () => {
         <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
           HOME
         </li>
+
         <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
-          PORTFOLIO
+          EXPERIMENT
+        </li>
+        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
+          WORK
+        </li>
+
+        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
+          BLOG
         </li>
         <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
           RESUME
-        </li>
-        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
-          BLOG
         </li>
         <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
           CONTACT
