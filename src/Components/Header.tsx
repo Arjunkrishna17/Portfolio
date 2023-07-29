@@ -8,26 +8,33 @@ const Header = () => {
       </h4>
 
       <ul className="flex space-x-5 text-white font-poppins text-sm">
-        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
+        <a
+          href="#home"
+          className="cursor-pointer hover:underline underline-offset-2 decoration-2"
+        >
           HOME
-        </li>
+        </a>
 
-        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
-          EXPERIMENT
-        </li>
-        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
+        <a
+          href="#experiments"
+          className="cursor-pointer hover:underline underline-offset-2 decoration-2"
+        >
+          EXPERIMENTS
+        </a>
+        <a
+          href="#work"
+          className="cursor-pointer hover:underline underline-offset-2 decoration-2"
+        >
           WORK
-        </li>
+        </a>
 
-        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
+        <a
+          href="#blog"
+          className="cursor-pointer hover:underline underline-offset-2 decoration-2"
+        >
           BLOG
-        </li>
-        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
-          RESUME
-        </li>
-        <li className="cursor-pointer hover:underline underline-offset-2 decoration-2">
-          CONTACT
-        </li>
+        </a>
+       
       </ul>
     </div>
   );

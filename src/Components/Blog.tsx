@@ -23,7 +23,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="w-full h-full py-5 font-poppins px-20">
+    <div id="blog" className="w-full h-full py-5 font-poppins px-20">
       <div className="flex flex-col space-y-16">
         <h5 className="text-xl font-bold underline underline-offset-4 decoration-2 decoration-blue-500 text-gray-600">
           BLOG
