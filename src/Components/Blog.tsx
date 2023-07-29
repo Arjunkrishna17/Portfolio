@@ -7,18 +7,27 @@ const Blog = () => {
       name: "Customization of Font and its properties in React-Tailwind Project",
       date: "05 NOV 2022",
       link: "https://medium.com/@krishna.arjun/customization-of-font-in-react-tailwind-project-9218096542ae",
+      img: <TailwindLogo className="h-10 w-full opacity-60" />,
     },
 
     {
       name: "Dynamic color using Tailwind CSS.",
       date: "12 DEC 2022",
       link: "https://medium.com/@krishna.arjun/dynamic-color-using-tailwind-css-8229a1e05eae",
+      img: <TailwindLogo className="h-10 w-full opacity-60" />,
     },
 
     {
-      name: "Dynamic color using Tailwind CSS.",
-      date: "12 DEC 2022",
-      link: "https://medium.com/@krishna.arjun/dynamic-color-using-tailwind-css-8229a1e05eae",
+      name: "How to use SVG as React Component?",
+      date: "05 MAY 2023",
+      link: "https://medium.com/@krishna.arjun/how-to-use-svg-as-react-component-2ec6364e6a64",
+      img: (
+        <img
+          src={require("../Components/Images/SvgBlog.jpg")}
+          alt="svg as react component"
+          className="w-10 h-10"
+        />
+      ),
     },
   ];
 
@@ -36,10 +45,10 @@ const Blog = () => {
               href={blog.link}
               rel="noreferrer"
               target="_blank"
-              className="flex flex-col w-44 h-36 space-y-5 bg-white rounded-xl border shadow-lg px-5 py-3 hover:scale-105 transition hover:border-blue-500"
+              className="flex flex-col justify-center w-44 h-36 space-y-5 bg-white rounded-xl border shadow-lg px-5 py-3 hover:scale-105 transition hover:border-blue-500"
             >
-              <TailwindLogo className="h-10 w-full opacity-60" />
-              <div className=" h-fit space-y-3 ">
+              <div className="flex w-full justify-center ">{blog.img}</div>
+              <div className=" flex flex-col items-center justify-center h-fit space-y-3 ">
                 <p className="text-xs">{blog.date}</p>
                 <h6 className="text-xs  text-gray-600 line-clamp-2">
                   {blog.name}
