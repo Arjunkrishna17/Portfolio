@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex fixed w-full h-20 items-center justify-between px-20 bg-gradient-to-r to-cyan-500 from-blue-500">
+    <div className="flex fixed w-full h-20 items-center justify-between px-20 bg-gradient-to-r to-to from-from">
       <a href="/" className="text-white font-lobster text-2xl cursor-pointer">
         Krishna Arjun
       </a>

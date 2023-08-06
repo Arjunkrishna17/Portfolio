@@ -64,8 +64,8 @@ const Home = () => {
         </div>
 
         <img
-          className="w-80 h-80 rounded-full"
-          src={require("./Images/Krishna.jpg")}
+          className="w-80 h-80 rounded-tl-3xl shadow-lg"
+          src={require("./Images/Avatar.jpeg")}
           alt="krishna"
         />
       </div>
