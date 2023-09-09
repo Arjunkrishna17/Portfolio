@@ -4,10 +4,10 @@ const Work = () => {
   return (
     <div
       id="work"
-      className="flex flex-col justify-center w-full h-full  py-10 font-poppins px-20 "
+      className="flex flex-col justify-center w-full h-full  py-10 font-poppins px-5 lg:px-20 "
     >
       <div className="flex flex-col h-full space-y-5  ">
-        <div className="w-fit font-bold  hover:underline decoration-blue-500 decoration-2 underline-offset-4">
+        <div className="flex flex-col items-center lg:items-start space-y-5 w-full  font-bold  hover:underline decoration-from decoration-2 underline-offset-4" >
           <p className="text-gray-600">WORK</p>
         </div>
 

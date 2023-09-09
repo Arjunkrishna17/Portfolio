@@ -102,10 +102,10 @@ const Experiments = () => {
   return (
     <div
       id="experiments"
-      className="flex flex-col justify-center w-full h-full  px-10 py-10 md:px-20 "
+      className="flex flex-col justify-center w-full h-full  px-10 py-10 lg:px-20 "
     >
       <div className="flex flex-col h-full w-full justify-center  space-y-8  ">
-        <div className="flex flex-col space-y-5 w-fit  font-bold  hover:underline decoration-blue-500 decoration-2 underline-offset-4">
+        <div className="flex flex-col items-center lg:items-start space-y-5 w-full  font-bold  hover:underline decoration-from decoration-2 underline-offset-4">
           <p className="text-gray-600">EXPERIMENTS</p>
         </div>
 

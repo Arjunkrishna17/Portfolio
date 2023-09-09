@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="flex flex-col py-5 lg:py-40 px-10 justify-center w-full h-full  lg:px-20 font-poppins "
+      className="grow  py-5 lg:py-36 px-10 justify-center w-full lg:px-20 font-poppins "
     >
-      <div className="flex flex-col-reverse items-center  lg:items-start lg:flex-row  lg:space-x-16">
+      <div className="flex flex-col-reverse h-full items-center  lg:items-start lg:flex-row  lg:space-x-16 ">
         <div className="flex flex-col mt-5  lg:mt-0  items-center lg:items-start space-y-10 ">
-          <div className="flex flex-col  w-full text-xl sm:text-3xl items-center lg:items-start">
+          <div className="flex flex-col  w-full text-xl lg:text-3xl items-center lg:items-start font-bold opacity-70">
             <h1>Hi, I am Krishna Arjun</h1>
             <TypeWritter
               options={{ loop: true }}
@@ -65,7 +65,7 @@ const Home = () => {
           </div>
         </div>
         <img
-          className="w-52 h-52 sm:h-80 sm:w-80  rounded-tl-3xl shadow-lg"
+          className="w-52 h-52 lg:h-80 lg:w-80  rounded-tl-3xl shadow-lg"
           src={require("../Images/Avatar.jpeg")}
           alt="krishna"
         />

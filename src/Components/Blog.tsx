@@ -78,7 +78,10 @@ const Blog = () => {
   return (
     <div id="blog" className="w-full  px-10 lg:px-20 h-full py-10">
       <div className="flex  flex-col w-full space-y-8 ">
-        <h5 className="text-gray-600 font-bold">BLOG</h5>
+        <div className="flex flex-col items-center lg:items-start space-y-5 w-full  font-bold  hover:underline decoration-from decoration-2 underline-offset-4">
+          <h5 className="text-gray-600 font-bold">BLOG</h5>
+        </div>
+
         <div className="w-full h-full space-x-5 justify-center items-center ">
           <Slider {...settings}>
             {blogDetails.map((blog) => (
