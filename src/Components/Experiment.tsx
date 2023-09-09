@@ -112,7 +112,10 @@ const Experiments = () => {
         <div className="w-full h-full space-x-5 justify-center items-center">
           <Slider {...settings}>
             {experimentsData.map((experiment) => (
-              <div className="flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5 hover:scale-105 transition hover:border-blue-500">
+              <div
+                key={experiment.name}
+                className="flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5 hover:scale-105 transition hover:border-blue-500"
+              >
                 <div className="flex flex-col space-y-3 w-full items-center">
                   {experiment.img}
                   <h5 className="font-bold text-xs text-center">
