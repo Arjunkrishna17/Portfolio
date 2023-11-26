@@ -1,5 +1,5 @@
 import React from "react";
-import TypeWritter from "typewriter-effect";
+
 import { ReactComponent as LinkedIn } from "../Images/LinekedIn.svg";
 import { ReactComponent as GitHub } from "../Images/GitHub.svg";
 import { GIT_HUB_LINK, LINKED_IN_LINK } from "./Constants";
@@ -13,23 +13,10 @@ const Home = () => {
       <div className="flex flex-col-reverse h-full items-center  lg:items-start lg:flex-row  lg:space-x-16 ">
         <div className="flex flex-col mt-5  lg:mt-0  items-center lg:items-start space-y-10 ">
           <div className="flex flex-col  w-full text-xl lg:text-3xl items-center lg:items-start font-bold opacity-70">
-            <h1>Hi, I am Krishna Arjun</h1>
-            <TypeWritter
-              options={{ loop: true }}
-              onInit={(typeWritter) => {
-                typeWritter
-                  .typeString("a Software Engineer")
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .typeString("a Front-End Engineer")
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .typeString("a Back-End Engineer")
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .start();
-              }}
-            />
+            <div className="flex flex-col space-y-2">
+              <h1>Hi, I am Krishna Arjun</h1>
+              <h4 className="text-lg">Founding Engineer @ Praximax</h4>
+            </div>
           </div>
           <div className="flex w-full justify-center">
             <p className="flex  text-justify text-sm sm:text-base font-light leading-6 ">
