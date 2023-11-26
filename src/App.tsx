@@ -1,9 +1,9 @@
 import React from "react";
-import Blog from "./Components/Blog";
+import Blog from "./Components/Blog/Blog";
 import Experiment from "./Components/Experiment";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
-import Work from "./Components/Work";
+import Work from "./Components/Work/Work";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {

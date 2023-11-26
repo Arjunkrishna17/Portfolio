@@ -3,28 +3,28 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import { ReactComponent as Diversio } from "../Images/Diversio.svg";
 import "./slick.css";
 
 const experimentsData = [
   {
-    name: "Diversio",
-    img: <Diversio className="fill-orange-500 w-12 h-16" />,
-    description:
-      "Diversio is an e-commerce website, and I am currently in the process of experimenting with its creation using the MERN stack.",
-  },
-
-  {
-    name: "ECS Deployment",
+    name: "Microsoft Teams Integration",
     img: (
       <img
-        src={require("../Images/ECSWorkFlow.png")}
-        className="h-16 w-16 "
-        alt="ecs"
+        src={require("../Images/MSTeams.png")}
+        className="h-12"
+        alt="MS Teams"
       />
     ),
     description:
-      "Discovering the steps to deploy Docker containers in ECS via github actions.",
+      "Discover the process of connecting and sending notifications to a Microsoft Teams channel through an external application.",
+  },
+  {
+    name: "Slack Integration",
+    img: (
+      <img src={require("../Images/Slack.png")} className="h-12" alt="Slack" />
+    ),
+    description:
+      "Discover the process of connecting and sending notifications to a Slack channel through an external application.",
   },
   {
     name: "Route Subdomain to AWS load balancer",
@@ -41,7 +41,7 @@ const experimentsData = [
 
   {
     name: "NLP-Powered Chatbot",
-    img: <img src={require("../Images/NLP.png")} className="h-16" alt="nlp" />,
+    img: <img src={require("../Images/NLP.png")} className="h-12" alt="nlp" />,
     description:
       "Combining the power of NLP with chatbots, empowers chatbots to understand and interact with users in a human-like manner.",
   },
@@ -50,7 +50,7 @@ const experimentsData = [
     img: (
       <img
         src={require("../Images/websocket.svg").default}
-        className="h-16 w-12 "
+        className="h-12 "
         alt="websocket"
       />
     ),
