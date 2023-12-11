@@ -114,7 +114,7 @@ const Experiments = () => {
             {experimentsData.map((experiment) => (
               <div
                 key={experiment.name}
-                className="flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5 hover:scale-105 transition hover:border-blue-500"
+                className="flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5"
               >
                 <div className="flex flex-col space-y-3 w-full items-center">
                   {experiment.img}
