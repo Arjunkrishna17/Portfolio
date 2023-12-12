@@ -3,6 +3,7 @@ import Slider from "react-slick";
 
 import { workData } from "./WorkData";
 import { sliderSettings } from "../SliderSettings";
+import "../slick.css";
 
 const Work = () => {
   return (
@@ -15,7 +16,7 @@ const Work = () => {
           <p className="text-gray-600">WORK</p>
         </div>
 
-        <div className="w-full h-full space-x-5 justify-center items-center">
+        <div className="w-full h-full  ">
           <Slider {...sliderSettings}>
             {workData.map((work) => (
               <a
@@ -23,7 +24,12 @@ const Work = () => {
                 href={work.link}
                 rel="noreferrer"
                 target="_blank"
-                className="flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5 hover:scale-105 transition hover:border-blue-500"
+                className={
+                  "flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5 " +
+                  (work.link
+                    ? "hover:scale-105 transition hover:border-blue-500"
+                    : " pointer-events:none bg-gray-200 opacity-50 cursor-default")
+                }
               >
                 <div className="flex flex-col space-y-3 w-full items-center ">
                   <img

@@ -109,7 +109,7 @@ const Experiments = () => {
           <p className="text-gray-600">EXPERIMENTS</p>
         </div>
 
-        <div className="w-full h-full space-x-5 justify-center items-center">
+        <div className="w-full h-full">
           <Slider {...settings}>
             {experimentsData.map((experiment) => (
               <div
