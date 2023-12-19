@@ -16,27 +16,35 @@ const Header = () => {
         href="#home"
         className="cursor-pointer hover:underline underline-offset-2 decoration-2"
       >
-        HOME
+        Home
+      </a>
+
+      <a
+        href="#aboutMe"
+        className="cursor-pointer hover:underline underline-offset-2 decoration-2"
+      >
+        About Me
+      </a>
+
+      <a
+        href="#work"
+        className="cursor-pointer hover:underline underline-offset-2 decoration-2"
+      >
+        Work
       </a>
 
       <a
         href="#experiments"
         className="cursor-pointer hover:underline underline-offset-2 decoration-2"
       >
-        EXPERIMENTS
-      </a>
-      <a
-        href="#work"
-        className="cursor-pointer hover:underline underline-offset-2 decoration-2"
-      >
-        WORK
+        Experiments
       </a>
 
       <a
         href="#blog"
         className="cursor-pointer hover:underline underline-offset-2 decoration-2"
       >
-        BLOG
+        Blog
       </a>
     </ul>
   );
@@ -44,7 +52,7 @@ const Header = () => {
   return (
     <div className="flex z-10 fixed w-full first-letter:w-full h-20 items-center justify-between  px-5 md:px-10 bg-gradient-to-r to-to from-from">
       <a href="/" className="text-white font-lobster text-2xl cursor-pointer">
-        Krishna Arjun
+        Krishnadas R
       </a>
       <div className="hidden lg:flex">{menuList}</div>
 

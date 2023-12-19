@@ -5,6 +5,8 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Work from "./Components/Work/Work";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AboutMe from "./Components/AboutMe";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -17,9 +19,11 @@ const App = () => {
             element={
               <div className="h-full overflow-y-scroll bg-body ">
                 <Home />
-                <Experiment />
+                <AboutMe />
                 <Work />
+                <Experiment />
                 <Blog />
+                <Footer />
               </div>
             }
           />

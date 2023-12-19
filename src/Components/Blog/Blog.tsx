@@ -6,41 +6,47 @@ import { blogDetails } from "./BlogData";
 import { sliderSettings } from "../SliderSettings";
 
 const Blog = () => {
-
   return (
-    <div id="blog" className="w-full  px-10 lg:px-20 h-full py-10">
-      <div className="flex  flex-col w-full space-y-8 ">
-        <div className="flex flex-col items-center lg:items-start space-y-5 w-full  font-bold  hover:underline decoration-from decoration-2 underline-offset-4">
-          <h5 className="text-gray-600 font-bold">BLOG</h5>
-        </div>
+    <div
+      id="blog"
+      className="flex flex-col h-full items-center justify-center space-y-10 w-full px-10 py-10  "
+    >
+      <h1 className="font-bold text-xl opacity-80">Blog</h1>
 
-        <div className="w-full h-full space-x-5 justify-center items-center ">
-          <Slider {...sliderSettings}>
-            {blogDetails.map((blog) => (
-              <a
-                key={blog.name}
-                href={blog.link}
-                rel="noreferrer"
-                target="_blank"
-                className="flex flex-col items-center justify-center bg-white py-5 w-52 h-56 space-y-5 rounded-xl border shadow-lg px-5 hover:scale-105 transition hover:border-blue-500"
-              >
-                <div className="flex w-full justify-center ">
-                  <img
-                    src={require("../../Images/" + blog.img)}
-                    alt={blog.name}
-                    className="w-28 h-20"
-                  />
-                </div>
-                <div className=" flex flex-col items-center justify-center h-fit space-y-3 ">
-                  <h6 className="text-xs text-center font-semibold ">
-                    {blog.name}
-                  </h6>
-                  <p className="text-xs pt-3">{blog.date}</p>
-                </div>
-              </a>
-            ))}
-          </Slider>
-        </div>
+      <div className="w-full h-full space-x-5 justify-center items-center ">
+        <Slider {...sliderSettings}>
+          {blogDetails.map((blog) => (
+            <div
+              key={blog.name}
+              className=" bg-white space-y-10 h-80 border rounded-xl py-5 px-8"
+            >
+              <div className="flex w-full justify-center h-20 ">
+                <img
+                  src={require("../../Images/" + blog.img)}
+                  alt={blog.name}
+                  className="w-28 h-20"
+                />
+              </div>
+              <div className=" flex flex-col items-center justify-center  space-y-3 h-10 ">
+                <h6 className="text-xs text-center font-semibold ">
+                  {blog.name}
+                </h6>
+                <p className="text-xs pt-3">{blog.date}</p>
+              </div>
+
+              <div className="flex w-full justify-center">
+                <a
+                  href={blog.link}
+                  rel="noreferrer"
+                  target="_blank"
+                  className="flex font-semibold w-24 justify-center  py-1 text-xs border outline outline-1 outline-gray-500  hover:text-white hover:bg-black disabled:bg-gray-200 disabled:opacity-70 disabled:text-black  rounded-lg"
+                >
+                  View
+                </a>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );

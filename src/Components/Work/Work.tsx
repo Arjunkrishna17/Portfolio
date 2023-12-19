@@ -5,46 +5,87 @@ import { workData } from "./WorkData";
 import { sliderSettings } from "../SliderSettings";
 import "../slick.css";
 
+//  <a
+//                 key={work.name}
+//                 href={work.link}
+//                 rel="noreferrer"
+//                 target="_blank"
+//                 className={
+//                   "flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5 " +
+//                   (work.link
+//                     ? "hover:scale-105 transition hover:border-blue-500"
+//                     : " pointer-events:none bg-gray-200 opacity-50 cursor-default")
+//                 }
+//               ></a>
+
 const Work = () => {
   return (
     <div
       id="work"
-      className="flex flex-col justify-center w-full h-full  py-10 px-5 lg:px-20 "
+      className="flex flex-col h-full items-center justify-center space-y-10 w-full px-10 py-10"
     >
-      <div className="flex flex-col h-full space-y-5  ">
-        <div className="flex flex-col items-center lg:items-start space-y-5 w-full  font-bold  hover:underline decoration-from decoration-2 underline-offset-4">
-          <p className="text-gray-600">WORK</p>
-        </div>
+      <h1 className="font-bold text-xl opacity-80">Work</h1>
 
-        <div className="w-full h-full  ">
-          <Slider {...sliderSettings}>
-            {workData.map((work) => (
-              <a
-                key={work.name}
-                href={work.link}
-                rel="noreferrer"
-                target="_blank"
-                className={
-                  "flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5 " +
-                  (work.link
-                    ? "hover:scale-105 transition hover:border-blue-500"
-                    : " pointer-events:none bg-gray-200 opacity-50 cursor-default")
-                }
-              >
-                <div className="flex flex-col space-y-3 w-full items-center ">
-                  <img
-                    src={require("../../Images/" + work.img)}
-                    alt={work.img}
-                    className="w-8 h-8 "
-                  />
-                  <h5 className="font-bold text-xs text-center">{work.name}</h5>
+      <div className="w-full h-full  ">
+        <Slider {...sliderSettings}>
+          {workData.map((work) => (
+            <div
+              className={
+                " bg-white h-80 border rounded-xl py-5 px-8" +
+                (work.name === "Hey Chat" ? " bg-gray-300 opacity-60" : "")
+              }
+            >
+              <div className="flex flex-col  w-full items-center ">
+                <img
+                  src={require("../../Images/" + work.img)}
+                  alt={work.img}
+                  className="w-12 h-12 "
+                />
+                <h5 className="font-bold text-center">{work.name}</h5>
+              </div>
+
+              <p className="text-xs text-center h-10">{work.description}</p>
+
+              <div className="flex flex-col space-y-8">
+                <p className="text-xs h-12">
+                  <span className="test-base font-bold">Tech Stack:</span>{" "}
+                  <span>{work.techStack}</span>
+                </p>
+
+                <div className="flex w-full  text-xs space-x-3 justify-center pt-5">
+                  <a
+                    key={work.name}
+                    href={work.githubLink}
+                    rel="noreferrer"
+                    target="_blank"
+                    className={
+                      "flex font-semibold w-24 justify-center  py-2 border outline outline-1 outline-gray-500  rounded-lg" +
+                      (work.name === "Hey Chat"
+                        ? " pointer-events-none"
+                        : " hover:text-white hover:bg-black")
+                    }
+                  >
+                    Git Hub
+                  </a>
+                  <a
+                    key={work.name}
+                    href={work.link}
+                    rel="noreferrer"
+                    target="_blank"
+                    className={
+                      "flex font-semibold w-24 justify-center  py-2 border outline outline-1 outline-gray-500  rounded-lg" +
+                      (work.name === "Hey Chat"
+                        ? " pointer-events-none"
+                        : " hover:text-white hover:bg-black")
+                    }
+                  >
+                    Live Demo
+                  </a>
                 </div>
-
-                <p className="text-xs text-justify">{work.description}</p>
-              </a>
-            ))}
-          </Slider>
-        </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );

@@ -11,18 +11,34 @@ const experimentsData = [
     img: (
       <img
         src={require("../Images/MSTeams.png")}
-        className="h-12"
+        className="w-12 h-12 "
         alt="MS Teams"
       />
     ),
-    description:
-      "Discover the process of connecting and sending notifications to a Microsoft Teams channel through an external application.",
+    Aim: [
+      "Different ways of integration",
+      "Send messages to channels",
+      "Create interactive messages",
+      "Listen to events",
+      "Explore Incoming webhook connector",
+    ],
   },
   {
     name: "Slack Integration",
     img: (
-      <img src={require("../Images/Slack.png")} className="h-12" alt="Slack" />
+      <img
+        src={require("../Images/Slack.png")}
+        className="w-12 h-12 "
+        alt="Slack"
+      />
     ),
+    Aim: [
+      "Different ways of integration",
+      "Send messages to channels",
+      "Create interactive messages",
+      "Listen to events",
+      "Explore Incoming webhooks",
+    ],
     description:
       "Discover the process of connecting and sending notifications to a Slack channel through an external application.",
   },
@@ -31,29 +47,48 @@ const experimentsData = [
     img: (
       <img
         src={require("../Images/loadBalancer.png")}
-        className="h-12"
+        className="w-12 h-12 "
         alt="load balancer"
       />
     ),
+    Aim: [
+      "Create subdomain from main domain",
+      "Create SSL Certificate",
+      "Explore DNS Records",
+      "Route to AWS Load balancer",
+    ],
     description:
       "Exploring Subdomain Routing to a AWS Load Balancer via CNAME DNS Records",
   },
 
   {
     name: "NLP-Powered Chatbot",
-    img: <img src={require("../Images/NLP.png")} className="h-12" alt="nlp" />,
+    img: (
+      <img
+        src={require("../Images/NLP.png")}
+        className="w-12 h-12 "
+        alt="nlp"
+      />
+    ),
+    Aim: [
+      "To understand NLP",
+      "User feedback mechanism to increase performance",
+      "Maintain context of Conversations to increase user experience",
+    ],
     description:
       "Combining the power of NLP with chatbots, empowers chatbots to understand and interact with users in a human-like manner.",
   },
   {
-    name: "WebSocket notification service",
+    name: "WebSocket",
     img: (
       <img
         src={require("../Images/websocket.svg").default}
-        className="h-12 "
+        className="w-12 h-12 "
         alt="websocket"
       />
     ),
+    Aim: ["Push message to target user", "Explore Socket.io"],
+
     description:
       "Creating a WebSocket Notification System for Real-time Updates and Eliminating Polling.",
   },
@@ -99,37 +134,39 @@ const Experiments = () => {
       },
     ],
   };
+
+  const date = new Date();
+
   return (
     <div
       id="experiments"
-      className="flex flex-col justify-center w-full h-full  px-10 py-10 lg:px-20 "
+      className="flex flex-col h-full items-center justify-center space-y-10 w-full px-10 py-10"
     >
-      <div className="flex flex-col h-full w-full justify-center  space-y-8  ">
-        <div className="flex flex-col items-center lg:items-start space-y-5 w-full  font-bold  hover:underline decoration-from decoration-2 underline-offset-4">
-          <p className="text-gray-600">EXPERIMENTS</p>
-        </div>
+      <h1 className="font-bold text-xl opacity-80">Experiments</h1>
 
-        <div className="w-full h-full">
-          <Slider {...settings}>
-            {experimentsData.map((experiment) => (
-              <div
-                key={experiment.name}
-                className="flex flex-col items-center justify-center w-52 h-56 space-y-5 bg-white rounded-lg border shadow-lg px-5 py-5"
-              >
-                <div className="flex flex-col space-y-3 w-full items-center">
-                  {experiment.img}
-                  <h5 className="font-bold text-xs text-center">
-                    {experiment.name}
-                  </h5>
-                </div>
-
-                <p className="text-xs text-justify ">
-                  {experiment.description}
-                </p>
+      <div className="w-full h-full">
+        <Slider {...settings}>
+          {experimentsData.map((experiment) => (
+            <div className=" bg-white space-y-5 h-80 border rounded-xl py-5 px-8">
+              <div className="flex flex-col space-y-3 h-20 w-full items-center">
+                {experiment.img}
+                <h5 className="font-bold text-xs text-center">
+                  {experiment.name}
+                </h5>
               </div>
-            ))}
-          </Slider>
-        </div>
+
+              <h5 className="tex-sm font-semibold">Aim</h5>
+
+              <ul className="text-xs space-y-2">
+                {experiment.Aim?.map((aim) => (
+                  <li className="list-disc" key={aim + date.valueOf()}>
+                    {aim}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
