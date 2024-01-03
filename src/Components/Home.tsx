@@ -40,10 +40,10 @@ const Home = () => {
             <div className="flex flex-col items-center lg:items-start font-bold opacity-70">
               <div className="flex flex-col space-y-2">
                 <h1 className="text-center lg:text-start text-xl lg:text-3xl">
-                  Hi, I am Krishnadas R
+                  Hi, I am Krishnadas R (Krishna Arjun)
                 </h1>
                 <h4 className="text-sm lg:text-xl opacity-80">
-                  Founding Engineer @ Praximax
+                  Founding Software Engineer @ Praximax
                 </h4>
               </div>
             </div>

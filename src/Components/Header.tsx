@@ -62,7 +62,7 @@ const Header = () => {
       />
 
       {showMenu && (
-        <div className="flex flex-col absolute right-0 top-0 w-52 h-52 bg-to border border-white text-white rounded-l-lg shadow-sm">
+        <div className="flex flex-col absolute right-0 top-0 w-52 py-5 bg-to border border-white text-white rounded-l-lg shadow-sm">
           <button
             onClick={menuHandler}
             className=" absolute right-5 top-1 flex w-8 h-8 rounded-full items-center justify-center hover:bg-gray-100 hover:text-black"
