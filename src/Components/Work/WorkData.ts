@@ -1,6 +1,9 @@
+import { events } from "../../GA/EVENTS";
+
 export const workData = [
   {
     name: "Diversio",
+    action: events.DIVERSIO,
     img: "Diversio.svg",
     link: "https://diversio.krishnaarjun.tech",
     githubLink: "https://github.com/Arjunkrishna17?tab=repositories",
@@ -10,6 +13,7 @@ export const workData = [
   },
   {
     name: "Hey Chat",
+    action: events.HEY_CHAT,
     img: "HeyChat.svg",
     link: "",
     description: "Hey Chat is a personal chat app",
