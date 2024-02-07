@@ -5,7 +5,7 @@ import { workData } from "./WorkData";
 import { sliderSettings } from "../SliderSettings";
 import "../slick.css";
 import CustomEvent from "../../GA/CustomEvent";
-import { events } from "../../GA/EVENTS";
+
 
 const Work = () => {
   return (
