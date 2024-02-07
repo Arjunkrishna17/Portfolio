@@ -4,6 +4,8 @@ import { ReactComponent as LinkedIn } from "../Images/LinekedIn.svg";
 import { ReactComponent as GitHub } from "../Images/GitHub.svg";
 import { ReactComponent as Twitter } from "../Images/Twitter.svg";
 import { GIT_HUB_LINK, LINKED_IN_LINK, TWITTER_LINK } from "./Constants";
+import CustomEvent from "../GA/CustomEvent";
+import { events } from "../GA/EVENTS";
 
 const Home = () => {
   return (
@@ -12,6 +14,9 @@ const Home = () => {
         <div className="flex flex-col-reverse relative h-full items-center justify-center lg:flex-row space-x-5 ">
           <div className="flex lg:flex-col lg:mr-8 2xl:absolute left-6 top-12 lg:border items-center justify-center space-x-8 lg:space-x-0 lg:space-y-10 lg:bg-white px-2 py-5 lg:shadow-lg mt-8 lg:mt-0">
             <a
+              onClick={() =>
+                CustomEvent(events.LINKED_IN, "social media", "linked in")
+              }
               href={LINKED_IN_LINK}
               target="_blank"
               rel="noreferrer"
@@ -20,6 +25,9 @@ const Home = () => {
               <LinkedIn className="w-8 h-8" />
             </a>
             <a
+              onClick={() =>
+                CustomEvent(events.GIT_HUB, "social media", "git hub")
+              }
               href={GIT_HUB_LINK}
               target="_blank"
               rel="noreferrer"
@@ -28,6 +36,9 @@ const Home = () => {
               <GitHub className="w-8 h-8" />
             </a>
             <a
+              onClick={() =>
+                CustomEvent(events.TWITTER, "social media", "twitter")
+              }
               href={TWITTER_LINK}
               target="_blank"
               rel="noreferrer"
@@ -57,6 +68,7 @@ const Home = () => {
             </div>
 
             <a
+              onClick={() => CustomEvent(events.CV_DOWNLOAD, "cv", "")}
               href="https://diversio-product-images.s3.amazonaws.com/CV/Krishnadas+R.pdf"
               target="_blank"
               rel="noreferrer"

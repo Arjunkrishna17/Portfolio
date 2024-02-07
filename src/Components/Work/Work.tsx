@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import { workData } from "./WorkData";
 import { sliderSettings } from "../SliderSettings";
 import "../slick.css";
+import CustomEvent from "../../GA/CustomEvent";
+import { events } from "../../GA/EVENTS";
 
 const Work = () => {
   return (
@@ -41,6 +43,9 @@ const Work = () => {
 
                 <div className="flex w-full  text-xs space-x-3 justify-center pt-5">
                   <a
+                    onClick={() =>
+                      CustomEvent(work.action, "project", "github")
+                    }
                     key={work.name}
                     href={work.githubLink}
                     rel="noreferrer"
@@ -55,6 +60,9 @@ const Work = () => {
                     Git Hub
                   </a>
                   <a
+                    onClick={() =>
+                      CustomEvent(work.action, "project", "live demo")
+                    }
                     key={work.name}
                     href={work.link}
                     rel="noreferrer"

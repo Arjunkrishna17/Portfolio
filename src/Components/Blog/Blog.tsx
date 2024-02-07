@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { blogDetails } from "./BlogData";
 import { sliderSettings } from "../SliderSettings";
+import CustomEvent from "../../GA/CustomEvent";
+import { events } from "../../GA/EVENTS";
 
 const Blog = () => {
   return (
@@ -36,6 +38,7 @@ const Blog = () => {
 
               <div className="flex w-full justify-center">
                 <a
+                  onClick={() => CustomEvent(events.BLOG, "blog", blog.name)}
                   href={blog.link}
                   rel="noreferrer"
                   target="_blank"
