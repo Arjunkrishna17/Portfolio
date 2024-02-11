@@ -6,7 +6,6 @@ import { sliderSettings } from "../SliderSettings";
 import "../slick.css";
 import CustomEvent from "../../GA/CustomEvent";
 
-
 const Work = () => {
   return (
     <div
@@ -20,10 +19,15 @@ const Work = () => {
           {workData.map((work) => (
             <div
               className={
-                " bg-white h-80 border rounded-xl py-5 px-8" +
+                " bg-white h-80 border rounded-xl relative  py-5 px-8" +
                 (work.name === "Hey Chat" ? " bg-gray-300 opacity-60" : "")
               }
             >
+              {work.paid && (
+                <div className="bg-rose-200 absolute px-5 py-1 left-2">
+                  Paid
+                </div>
+              )}
               <div className="flex flex-col  w-full items-center ">
                 <img
                   src={require("../../Images/" + work.img)}
@@ -42,23 +46,27 @@ const Work = () => {
                 </p>
 
                 <div className="flex w-full  text-xs space-x-3 justify-center pt-5">
-                  <a
-                    onClick={() =>
-                      CustomEvent(work.action, "project", "github")
-                    }
-                    key={work.name}
-                    href={work.githubLink}
-                    rel="noreferrer"
-                    target="_blank"
-                    className={
-                      "flex font-semibold w-24 justify-center  py-2 border outline outline-1 outline-gray-500  rounded-lg" +
-                      (work.name === "Hey Chat"
-                        ? " pointer-events-none"
-                        : " hover:text-white hover:bg-black")
-                    }
-                  >
-                    Git Hub
-                  </a>
+                  {work.paid ? (
+                    <button className="font-bold text-violet-500">Read more</button>
+                  ) : (
+                    <a
+                      onClick={() =>
+                        CustomEvent(work.action, "project", "github")
+                      }
+                      key={work.name}
+                      href={work.githubLink}
+                      rel="noreferrer"
+                      target="_blank"
+                      className={
+                        "flex font-semibold w-24 justify-center  py-2 border outline outline-1 outline-gray-500  rounded-lg" +
+                        (work.name === "Hey Chat"
+                          ? " pointer-events-none"
+                          : " hover:text-white hover:bg-black")
+                      }
+                    >
+                      Git Hub
+                    </a>
+                  )}
                   <a
                     onClick={() =>
                       CustomEvent(work.action, "project", "live demo")
@@ -74,7 +82,7 @@ const Work = () => {
                         : " hover:text-white hover:bg-black")
                     }
                   >
-                    Live Demo
+                    {work.paid ? "Go to site" : "Live Demo"}
                   </a>
                 </div>
               </div>
