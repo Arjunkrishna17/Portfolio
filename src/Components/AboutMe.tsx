@@ -39,8 +39,8 @@ const AboutMe = () => {
               <div className="flex flex-col">
                 <p className="font-bold">Frontend:</p>
                 <p className="text-xs">
-                  Next.js, React Js, Tailwind CSS, Typescript, Javascript, HTML,
-                  CSS and Figma
+                  Next.js, Next UI lib, React Js, Tailwind CSS, Typescript,
+                  Javascript, HTML, CSS and Figma
                 </p>
               </div>
               <div>
@@ -50,8 +50,8 @@ const AboutMe = () => {
               <div>
                 <p className="font-bold">Miscellaneous</p>
                 <p className="text-xs">
-                  AWS, Docker, GitHub, GitHub Actions(CI/CD), DNS Management,
-                  Stripe Api's and Jira
+                  AWS, Docker, GitHub, GitHub Actions(CI/CD), Google Analytics,
+                  DNS Management, Stripe Api's and Jira
                 </p>
               </div>
             </div>
