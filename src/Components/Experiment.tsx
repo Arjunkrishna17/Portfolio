@@ -135,8 +135,6 @@ const Experiments = () => {
     ],
   };
 
-  const date = new Date();
-
   return (
     <div
       id="experiments"
@@ -146,8 +144,11 @@ const Experiments = () => {
 
       <div className="w-full h-full">
         <Slider {...settings}>
-          {experimentsData.map((experiment) => (
-            <div className=" bg-white space-y-5 h-80 border rounded-xl py-5 px-8">
+          {experimentsData.map((experiment, i) => (
+            <div
+              key={experiment.name + i}
+              className=" bg-white space-y-5 h-80 border rounded-xl py-5 px-8"
+            >
               <div className="flex flex-col space-y-3 h-20 w-full items-center">
                 {experiment.img}
                 <h5 className="font-bold text-xs text-center">
@@ -158,8 +159,8 @@ const Experiments = () => {
               <h5 className="tex-sm font-semibold">Aim</h5>
 
               <ul className="text-xs space-y-2">
-                {experiment.Aim?.map((aim) => (
-                  <li className="list-disc" key={aim + date.valueOf()}>
+                {experiment.Aim?.map((aim, i) => (
+                  <li className="list-disc" key={aim + i}>
                     {aim}
                   </li>
                 ))}

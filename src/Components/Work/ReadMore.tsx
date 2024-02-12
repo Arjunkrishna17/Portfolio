@@ -15,10 +15,10 @@ const ReadMore = () => {
       <div className="flex w-full items-center justify-center pt-5">
         {projectDetails.video ? (
           <video autoPlay={true} width="640" height="360" controls muted>
-            {projectDetails.video &&
-              projectDetails.video.map((src: string) => (
-                <source src={require("../../Video/" + src)} type="video/mp4" />
-              ))}
+            <source
+              src={require("../../Video/" + projectDetails.video)}
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         ) : (
