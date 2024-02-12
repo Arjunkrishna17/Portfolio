@@ -12,13 +12,13 @@ const AboutMe = () => {
 
       <div className="w-full">
         <Slider {...sliderSettings}>
-          <div className=" bg-white space-y-5 h-80 border rounded-xl py-5 px-8">
+          <div className=" bg-white space-y-5 h-96 lg:h-80 border rounded-xl py-5 px-8">
             <h1 className="font-bold opacity-70">Experience</h1>
 
             <div className="flex flex-col h-full w-full  space-y-5">
               <div className="flex flex-col w-full">
                 <p className="font-bold">Praximax</p>
-                <p className="text-xs">1.5+ Years </p>
+                <p className="text-xs">1.8+ Years </p>
                 <p className="text-xs">
                   Full stack engineer (Founding Engineer)
                 </p>
@@ -32,7 +32,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-5 w-full  bg-white h-80 border rounded-xl p-5">
+          <div className="flex flex-col space-y-5 w-full  bg-white h-96 lg:h-80 border rounded-xl p-5">
             <h1 className="font-bold opacity-70">Skills</h1>
 
             <div className="h-full w-full space-y-5">
@@ -57,7 +57,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-5 w-full  bg-white h-80 border rounded-xl p-5">
+          <div className="flex flex-col space-y-5 w-full  bg-white h-96 lg:h-80 border rounded-xl p-5">
             <h1 className="font-bold opacity-70">Education</h1>
             <div className=" h-full w-full justify-center space-y-5">
               <div>
@@ -76,7 +76,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          <div className="w-full space-y-5 bg-white h-80 border rounded-xl p-5">
+          <div className="w-full space-y-5 bg-white h-96 lg:h-80 border rounded-xl p-5">
             <h1 className="font-bold opacity-70">Interests</h1>
 
             <div className="h-full w-full justify-center space-y-4 text-xs">

@@ -22,7 +22,7 @@ const Work = () => {
           {workData.map((work) => (
             <div
               className={
-                " bg-white h-80 border rounded-xl relative  py-5 px-8 space-y-2  " +
+                "flex flex-col bg-white lg:h-80 border rounded-xl relative  py-5 px-8 space-y-2  " +
                 (work.name === "Hey Chat" ? " bg-gray-300 opacity-60" : "")
               }
             >
@@ -41,18 +41,20 @@ const Work = () => {
                   alt={work.img}
                   className="w-12 h-12 "
                 />
-                <h5 className="font-bold text-center ">{work.name}</h5>
+                <h5 className="font-bold text-center h-16 lg:h-10 ">{work.name}</h5>
               </div>
 
-              <p className="text-xs text-center  ">{work.description}</p>
+              <p className="text-xs text-center h-16 lg:h-10">
+                {work.description}
+              </p>
 
-              <div className="flex flex-col grow space-y-8 ">
+              <div className="flex flex-col justify-between grow h-44 lg:h-20  space-y-8 ">
                 <p className="text-xs  ">
                   <span className="test-base font-bold">Tech Stack:</span>{" "}
                   <span>{work.techStack}</span>
                 </p>
 
-                <div className="flex grow w-full  text-xs space-x-3 justify-center ">
+                <div className="flex mt-auto w-full  text-xs space-x-3 justify-center ">
                   {work.paid ? (
                     <button
                       onClick={() => navigate("/work/" + work.id)}
