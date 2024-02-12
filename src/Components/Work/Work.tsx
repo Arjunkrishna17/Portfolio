@@ -22,7 +22,7 @@ const Work = () => {
           {workData.map((work) => (
             <div
               className={
-                " bg-white h-80 border rounded-xl relative  py-5 px-8  " +
+                " bg-white h-80 border rounded-xl relative  py-5 px-8 space-y-2  " +
                 (work.name === "Hey Chat" ? " bg-gray-300 opacity-60" : "")
               }
             >
@@ -41,13 +41,13 @@ const Work = () => {
                   alt={work.img}
                   className="w-12 h-12 "
                 />
-                <h5 className="font-bold text-center h-6">{work.name}</h5>
+                <h5 className="font-bold text-center ">{work.name}</h5>
               </div>
 
-              <p className="text-xs text-center h-12 ">{work.description}</p>
+              <p className="text-xs text-center  ">{work.description}</p>
 
               <div className="flex flex-col grow space-y-8 ">
-                <p className="text-xs  h-16">
+                <p className="text-xs  ">
                   <span className="test-base font-bold">Tech Stack:</span>{" "}
                   <span>{work.techStack}</span>
                 </p>
