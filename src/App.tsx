@@ -9,6 +9,7 @@ import Home from "./Components/Home";
 import Work from "./Components/Work/Work";
 import AboutMe from "./Components/AboutMe";
 import Footer from "./Components/Footer";
+import ReadMore from "./Components/Work/ReadMore";
 
 const App = () => {
   ReactGA.initialize(process.env.REACT_APP_MEASUREMENT_ID as string);
@@ -31,6 +32,7 @@ const App = () => {
               </div>
             }
           />
+          <Route path="/work/:id" element={<ReadMore />} />
         </Routes>
       </div>
     </BrowserRouter>
