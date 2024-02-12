@@ -6,4 +6,7 @@ export const events = {
   DIVERSIO: "diversio",
   HEY_CHAT: "hey_chat",
   BLOG: "blog",
+  ENG_METRICS: "Eng_metrics",
+  OKR: "okr",
+  INDIVIDUAL_METRICS: "individual_metrics",
 };

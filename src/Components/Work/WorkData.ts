@@ -4,7 +4,7 @@ export const workData = [
   {
     id: 1,
     name: "Engineering Metrics",
-    action: events.HEY_CHAT,
+    action: events.ENG_METRICS,
     img: "EngMetrics.png",
     paid: true,
     link: "https://www.getaxon.io/pricing",
@@ -16,7 +16,7 @@ export const workData = [
   {
     id: 2,
     name: "OKR",
-    action: events.HEY_CHAT,
+    action: events.OKR,
     img: "OKR.png",
     gitHub: false,
     paid: true,
@@ -29,7 +29,7 @@ export const workData = [
   {
     id: 3,
     name: "Team Member Activity",
-    action: events.HEY_CHAT,
+    action: events.INDIVIDUAL_METRICS,
     img: "IndividualMetrics.png",
     paid: true,
     gitHub: false,

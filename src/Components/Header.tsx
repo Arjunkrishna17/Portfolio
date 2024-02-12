@@ -8,8 +8,6 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
 
-  // "flex flex-col justify-center h-full space-y-5 px-5 py-5";
-
   const menuList = (
     <ul className="flex flex-col justify-center h-full space-y-5 lg:items-center lg:space-y-0 px-5 py-5 lg:px-0 lg:py-0  lg:justify-end lg:flex-row lg:space-x-5 lg:text-sm lg:font-bold text-white">
       <a

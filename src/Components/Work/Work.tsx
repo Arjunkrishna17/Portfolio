@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 const Work = () => {
   const navigate = useNavigate();
 
+  const date = new Date();
+
   return (
     <div
       id="work"
@@ -19,8 +21,9 @@ const Work = () => {
 
       <div className="w-full h-full  ">
         <Slider {...sliderSettings}>
-          {workData.map((work) => (
+          {workData.map((work, i) => (
             <div
+              key={work.id + i}
               className={
                 "flex flex-col bg-white lg:h-80 border rounded-xl relative  py-5 px-8 space-y-2  " +
                 (work.name === "Hey Chat" ? " bg-gray-300 opacity-60" : "")
@@ -41,15 +44,17 @@ const Work = () => {
                   alt={work.img}
                   className="w-12 h-12 "
                 />
-                <h5 className="font-bold text-center h-16 lg:h-10 ">{work.name}</h5>
+                <h5 className="font-bold text-center h-16 lg:h-10 ">
+                  {work.name}
+                </h5>
               </div>
 
               <p className="text-xs text-center h-16 lg:h-10">
                 {work.description}
               </p>
 
-              <div className="flex flex-col justify-between grow h-44 lg:h-20  space-y-8 ">
-                <p className="text-xs  ">
+              <div className="flex flex-col justify-between grow h-44 lg:h-32 space-y-8 ">
+                <p className="text-xs">
                   <span className="test-base font-bold">Tech Stack:</span>{" "}
                   <span>{work.techStack}</span>
                 </p>
@@ -67,7 +72,7 @@ const Work = () => {
                       onClick={() =>
                         CustomEvent(work.action, "project", "github")
                       }
-                      key={work.name}
+                      key={work.id + date.valueOf()}
                       href={work.githubLink}
                       rel="noreferrer"
                       target="_blank"
